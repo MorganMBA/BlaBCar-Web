@@ -10,5 +10,6 @@ namespace BlaBCar.Models
         public long Id { get; set; }
         public string NomBooker { get; set; }
         public string TelephoneBooker { get; set; }
+        public virtual ICollection<Trajet> Trajets {get; set;}
     }
 }

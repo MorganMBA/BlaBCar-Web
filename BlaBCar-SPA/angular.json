@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "BlaBCar-SPA"
+    }
+  },
+  "defaultProject": "BlaBCar-SPA",
+  "cli": {
+    "analytics": false
+  }
 }
