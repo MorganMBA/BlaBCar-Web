@@ -29,6 +29,7 @@ namespace BlaBCar
         {
             services.AddDbContext<BlaBCarContext>(opt => opt.UseInMemoryDatabase("BlaBCarList"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +45,7 @@ namespace BlaBCar
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
     }
