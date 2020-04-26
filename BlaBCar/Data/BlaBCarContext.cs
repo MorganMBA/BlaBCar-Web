@@ -3,8 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BlaBCar.Models;
 
-namespace BlaBCar.Models
+namespace BlaBCar.Data
 {
     public class BlaBCarContext: DbContext
     {
@@ -15,5 +16,6 @@ namespace BlaBCar.Models
 
         public DbSet<Trajet> Trajets { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
