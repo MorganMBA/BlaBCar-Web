@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BlaBCar.Models;
+using BlaBCar.Data;
 
 namespace BlaBCar.Controllers
 {
@@ -22,9 +20,11 @@ namespace BlaBCar.Controllers
 
         // GET: api/Trajet
         [HttpGet]
-        public IEnumerable<Trajet> GetTrajets()
+        public async Task<IActionResult> GetTrajets()
         {
-            return _context.Trajets;
+            var trajets = await _context.Trajets.ToListAsync();
+
+            return Ok(trajets);
         }
 
         // GET: api/Trajet/5

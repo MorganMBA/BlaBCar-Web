@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BlaBCar.Models;
+using BlaBCar.Data;
 
 namespace BlaBCar.Controllers
 {
@@ -22,9 +23,11 @@ namespace BlaBCar.Controllers
 
         // GET: api/Reservation
         [HttpGet]
-        public IEnumerable<Reservation> GetReservations()
+        public async Task<IActionResult> GetReservations()
         {
-            return _context.Reservations;
+            var reservations = await _context.Reservations.ToListAsync();
+
+            return Ok(reservations);
         }
 
         // GET: api/Reservation/5
