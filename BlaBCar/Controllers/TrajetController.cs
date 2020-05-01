@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BlaBCar.Models;
 using BlaBCar.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BlaBCar.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TrajetController : ControllerBase
