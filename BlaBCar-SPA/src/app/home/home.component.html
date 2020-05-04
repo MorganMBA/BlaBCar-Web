@@ -1,1 +1,19 @@
-<p>home works!</p>
+<div class="container mt-5">
+  <div *ngIf="!registerMode" style="text-align: center">
+    <h1>Voyager proche de vos régions !</h1>
+    <p class="lead"> Juste en s'inscrivant </p>
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">S'inscrire maintenant</button>
+      <button class="btn btn-info btn-lg">Actualités Coronavirus</button>
+    </div>
+  </div>
+
+  <div *ngIf="registerMode" class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <app-register></app-register>
+      </div>
+    </div>
+  </div>
+
+</div>
