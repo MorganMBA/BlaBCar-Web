@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">BlaBCar</a>
+    <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active" >BlaBCar</a>
 
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="-1">Proposer un trajet</a>
+        <a class="nav-link" [routerLink]="['/proposer-trajet']" tabindex="-1">Proposer un trajet</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Rechercher un trajet</a>
+        <a class="nav-link" [routerLink]="['/rechercher-trajet']">Rechercher un trajet</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Vos reservations</a>
+        <a class="nav-link" [routerLink]="['/reservations']">Vos reservations</a>
       </li>
     </ul>
 
