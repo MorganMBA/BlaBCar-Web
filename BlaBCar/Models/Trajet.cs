@@ -21,5 +21,7 @@ namespace BlaBCar.Models
         public bool Fumeur { get; set; }
         public bool Handicape { get; set; }
         public bool Animaux { get; set; }
+
+        public ICollection<Photo> Photos { get; set; }
     }
 }
