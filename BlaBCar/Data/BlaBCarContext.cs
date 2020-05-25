@@ -17,5 +17,7 @@ namespace BlaBCar.Data
         public DbSet<Trajet> Trajets { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Photo> Photos { get; set; }
     }
 }
